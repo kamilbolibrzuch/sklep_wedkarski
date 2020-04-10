@@ -10,4 +10,6 @@ class MainController extends AbstractController
 }
 
 
+public function strona1(){return $this->render('home/strona1.html.twig');
+}
 }

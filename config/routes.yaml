@@ -6,5 +6,5 @@ main_url:
   controller: App\Controller\MainController::index
 
 strona1:
-  path: home/strona1.html.twig
+  path: /strona
   controller: App\Controller\MainController::strona1
