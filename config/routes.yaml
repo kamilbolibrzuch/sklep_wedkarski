@@ -6,5 +6,5 @@ main_url:
   controller: App\Controller\MainController::index
 
 main_strona1:
-    path:       /
+    path:       /article/{slug}
     controller: App\Controller\MainController::show
