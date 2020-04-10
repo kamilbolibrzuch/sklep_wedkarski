@@ -4,3 +4,7 @@
 main_url:
   path: /
   controller: App\Controller\MainController::index
+
+strona1:
+  path: home/strona1.html.twig
+  controller: App\Controller\MainController::strona1
