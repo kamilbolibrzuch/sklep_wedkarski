@@ -9,6 +9,5 @@ class MainController extends AbstractController
   public function index(){return $this->render('home/index.html.twig');
 }
 
-public function index(){return $this->render('home/stron1.html.twig');
-}
+
 }

@@ -4,7 +4,3 @@
 main_url:
   path: /
   controller: App\Controller\MainController::index
-
-main_strona1:
-    path:       /article/{slug}
-    controller: App\Controller\MainController::show
