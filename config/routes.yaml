@@ -2,7 +2,7 @@
 #    path: /
 #    controller: App\Controller\DefaultController::index
 main_url:
-  path: /
+  path: /index
   controller: App\Controller\MainController::index
 
 strona1:
