@@ -4,3 +4,7 @@
 main_url:
   path: /
   controller: App\Controller\MainController::index
+
+main_strona1:
+    path:       /
+    controller: App\Controller\MainController::show
