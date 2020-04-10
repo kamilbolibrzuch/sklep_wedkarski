@@ -9,13 +9,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+  <script $('.navbar-nav li').on("click", (function () {$('.navbar-nav li').removeClass("active");$(this).addClass("active");});></script>
 <style>
   .navbar-inverse{background-color: #004c3f;
   border-color:#004c3f;
   color: white;
   }
-  .navbar .nav .active > a {  
+  .navbar .nav .active > a {
     color: #000;
     background-color: #005184;
 }
