@@ -15,51 +15,59 @@
   border-color:#004c3f;
   color: white;
   }
-&.active{
-    background-color:darkred;
-}
+  #topheader .navbar-nav li > a {
+              text-transform: capitalize;
+              color: #333;
+              -webkit-transition: background-color .2s, color .2s;
+              transition: background-color .2s, color .2s;
+          }
+          #topheader .navbar-nav li > a:hover,
+          #topheader .navbar-nav li > a:focus {
+              background-color: #005596;
+              color: #fff;
+          }
+          #topheader .navbar-nav li.active > a {
+              background-color: #3990E0;
+              color: white;
+          }
 
-#thenav {
-
-    & :not(.top-nav-collapse) {
-    background: transparent;
-    }
-
-    .nav-item nav-link {
-    display:block;
-    color:white;
-      background-color:lightgray;
-
-        & :hover {
-            background-color:pink;
-            color:black;
-        }
-        &.active {
-            background-color:darkred;
-        }
-    }
-}
 </style>
     </head>
 
-<div id="topheader">
-    <nav id="thenav"class="navbar navbar-inverse">
-     <div class="container-fluid">
-       <div class="navbar-header">
-         <a class="navbar-brand" href="#">WebSiteName</a>
+    <div id="topheader">
+           <nav class="navbar navbar-default">
+               <div class="container-fluid">
+                   <div class="navbar-header">
+                       <a class="navbar-brand" href="#"
+                       style="color: green;">GeeksforGeeks</a>
+                   </div>
+
+                   <div class="collapse navbar-collapse"
+                           id="bs-example-navbar-collapse-1">
+                       <ul class="nav navbar-nav">
+                           <li class="active"><a href="#home">
+                               home</a>
+                           </li>
+                           <li><a href="#page1">HTML</a></li>
+                           <li><a href="#page2">CSS</a></li>
+                           <li><a href="#page3">JavaScript</a></li>
+                       </ul>
+                       <ul class="nav navbar-nav navbar-right">
+                           <li><a href="#">Fron-End</a></li>
+                       </ul>
+                   </div>
+               </div>
+           </nav>
        </div>
-       <ul class="nav navbar-nav">
-        <li><a  href="#scrollhome">Home<span class="sr-only">(current)</span></a></li>
-         <li><a href="#">Page 1</a></li>
-         <li><a href="#">Page 2</a></li>
-       </ul>
-       <ul class="nav navbar-nav navbar-right">
-         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Rejestracja</a></li>
-         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logowanie</a></li>
-       </ul>
-     </div>
-   </nav>
- </div>
+
+       <script>
+           $( '#topheader .navbar-nav a' ).on('click',
+                       function () {
+               $( '#topheader .navbar-nav' ).find( 'li.active' )
+               .removeClass( 'active' );
+               $( this ).parent( 'li' ).addClass( 'active' );
+           });
+       </script> 
 
     <div class="jumbotron text-center">
       <h1>SKLEP WĘDKARSKI</h1>
