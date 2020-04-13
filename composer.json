@@ -14,7 +14,9 @@
         "symfony/twig-bundle": "5.0.*",
         "symfony/yaml": "5.0.*"
     },
-    "require-dev": {"symfony/web-server-bundle":"^4.4.2"
+    "require-dev": {
+        "symfony/maker-bundle": "^1.15",
+        "symfony/web-server-bundle": "^4.4.2"
     },
     "config": {
         "preferred-install": {
