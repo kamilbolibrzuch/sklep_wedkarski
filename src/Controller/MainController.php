@@ -12,9 +12,6 @@ class MainController extends AbstractController
 
 public function strona1(){return $this->render('home/strona1.html.twig');
 }
-public function main(){
-  $products=$this->getDoctrine()->getRepository(Product::class)->findAll();
-  return $this->render('home/index.html.twig',['test'=>'', 'products'=>$products,]);
-}
+
 
 }
