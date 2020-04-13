@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controller;
-
+use App\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -17,19 +17,9 @@ class ProductController extends AbstractController
  /**
   * @Route("/product/{id}", name="product_show")
   */
- public function show($id)
+ public function show(Product $product)
  {
-     $product = $this->getDoctrine()
-         ->getRepository(Product::class)
-         ->find($id);
 
-     if (!$product) {
-         throw $this->createNotFoundException(
-             'No product found for id '.$id
-         );
-     }
-
-     return new Response('Check out this great product: '.$product->getName());
 
      // or render a template
      // in the template, print things with {{ product.name }}
