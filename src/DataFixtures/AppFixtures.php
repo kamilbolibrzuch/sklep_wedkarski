@@ -15,11 +15,12 @@ class AppFixtures extends Fixture
 
         $product= new Product();
         $product
-              ->getId('1')
+              
               ->setName('Klawiatura')
               ->setPrice('11111')
               ->setDescription('działa');
         $manager->persist($product);
         $manager->flush();
+
     }
 }

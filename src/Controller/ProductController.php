@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 use App\Entity\Product;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -17,6 +18,7 @@ class ProductController extends AbstractController
  /**
   * @Route("/product/{id}", name="product_show")
   */
+
  public function show($id)
  {
 
