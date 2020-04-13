@@ -10,25 +10,30 @@ class ProductController extends AbstractController
     /**
      * @Route("/product", name="product")
      */
-     public function createProduct(): Response
-     {
-       $entityManager = $this->getDoctrine()->getManager();
 
-       $product = new Product();
-       $product->setName('Klawiatura');
-       $product->setPrice(200);
-       $product->setDescription('juhu działa');
+     // src/Controller/ProductController.php
+ // ...
 
-       $entityManager->persist($product);
+ /**
+  * @Route("/product/{id}", name="product_show")
+  */
+ public function show($id)
+ {
+     $product = $this->getDoctrine()
+         ->getRepository(Product::class)
+         ->find($id);
 
-       $entityManager->flush();
-
-       return new Response('Zapisano nowy produkt z id '.$product->getId());
+     if (!$product) {
+         throw $this->createNotFoundException(
+             'No product found for id '.$id
+         );
      }
-    public function index()
-    {
-        return $this->render('product/index.html.twig', [
-            'controller_name' => 'ProductController',
-        ]);
-    }
+
+     return new Response('Check out this great product: '.$product->getName());
+
+     // or render a template
+     // in the template, print things with {{ product.name }}
+     // return $this->render('product/show.html.twig', ['product' => $product]);
+ }
+
 }
