@@ -20,7 +20,7 @@ class ProductController extends AbstractController
  public function show($id)
  {
 
-$product =$this->getDoctrine()->getRepository(Product:class)->find($id);
+$product =$this->getDoctrine()->getRepository(Product::class)->find($id);
 
 if(!$product){
   throw $this->createNotFound('Nie znaleziono produktu o id'.$id);
