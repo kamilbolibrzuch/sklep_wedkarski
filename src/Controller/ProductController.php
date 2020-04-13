@@ -28,7 +28,7 @@ if(!$product){
   throw $this->createNotFound('Nie znaleziono produktu o id'.$id);
 }
 
-return new Response('Zobacz produkt'.$product->getName());
+return new Response('Zobacz produkt'.$this->render('product/show.html.twig',[]);
 }
 
      // or render a template
