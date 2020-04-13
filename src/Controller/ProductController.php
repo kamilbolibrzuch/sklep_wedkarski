@@ -36,4 +36,4 @@ return new Response('Zobacz produkt'.$product->getName());
        return$this->render('product/index.html.twig', ['controller_name'=>'ProductController']);
      }
      // return $this->render('product/show.html.twig', ['product' => $product]);
- };
+ }

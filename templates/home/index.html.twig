@@ -93,9 +93,10 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
-
+{%for product in products%}
           <h3>{{product.name}}</h3>
           <p>tekst na strone</p>
+{%endfor%}          
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
           <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
         </div>
