@@ -27,8 +27,10 @@ $product =$this->getDoctrine()->getRepository(Product::class)->find($id);
 if(!$product){
   throw $this->createNotFound('Nie znaleziono produktu o id'.$id);
 }
+
 return new Response('Zobacz produkt'.$product->getName());
 }
+
      // or render a template
      // in the template, print things with {{ product.name }}
      public function index()
